@@ -89,26 +89,35 @@
       color: #2ecc71;
       margin-bottom: 1rem;
     }
+    /* Updated Skills container */
     .skills-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.5rem 0.8rem;
     }
+    /* Tiny pill-shaped skill cards */
     .skill-card {
       background-color: #d1fae5;
-      padding: 0.4rem 0.9rem;
+      padding: 0.35rem 0.9rem;
       border-radius: 20px;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: #222;
+      white-space: nowrap;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      cursor: default;
+      user-select: none;
     }
     body.dark .skill-card {
       background-color: #2ecc71;
       color: #121212;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
     }
     .skill-category {
-      font-weight: bold;
+      font-weight: 600;
       margin-right: 0.5rem;
       color: #27ae60;
+      white-space: nowrap;
     }
     .card-container {
       display: grid;
@@ -169,7 +178,7 @@
 <body>
   <button class="toggle-theme" title="Toggle Light/Dark">🌙</button>
   <header>
-    <img src="profile_photo.jpg" alt="Profile Photo" class="profile-photo" />
+    <img src="images/profile_photo.jpg" alt="Profile Photo" class="profile-photo" />
     <h1>Golla Karthik</h1>
     <p class="title">Business Analyst</p>
     <div class="social-links">
