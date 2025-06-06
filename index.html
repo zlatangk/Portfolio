@@ -16,7 +16,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     body {
-      background: #f4f4f4;
+      background: #f0fdf4;
       color: #222;
       line-height: 1.6;
       transition: all 0.3s ease;
@@ -35,7 +35,7 @@
       height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #0077cc;
+      border: 3px solid #2ecc71;
       margin-bottom: 1rem;
     }
     header h1 {
@@ -52,27 +52,18 @@
     }
     .social-links a {
       text-decoration: none;
-      color: #0077cc;
+      color: #2ecc71;
       margin: 0 1rem;
       font-size: 1.5rem;
       transition: color 0.3s ease;
     }
     .social-links a:hover {
-      color: #004a80;
+      color: #27ae60;
     }
     .phone {
       font-size: 1rem;
       color: #555;
       margin-top: 0.3rem;
-    }
-    .resume-link {
-      display: inline-block;
-      margin-top: 0.5rem;
-      color: #0077cc;
-      font-size: 1.2rem;
-    }
-    .resume-link:hover {
-      color: #004a80;
     }
     .toggle-theme {
       position: fixed;
@@ -95,28 +86,48 @@
       background: #1e1e1e;
     }
     h2 {
-      color: #0077cc;
+      color: #2ecc71;
       margin-bottom: 1rem;
     }
-    .skills-grid {
+    .skills-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 0.5rem;
     }
     .skill-card {
-      background: #e0f3ff;
-      border: 1px solid #cbe6ff;
-      border-radius: 6px;
+      background-color: #d1fae5;
       padding: 0.5rem 1rem;
-      font-size: 0.95rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: #e6fff4;
+      border: 1px solid #b2f5ea;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    .card h3 {
+      margin-bottom: 0.5rem;
     }
     .project-img {
       width: 100%;
-      max-height: 220px;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
       border-radius: 6px;
       margin-bottom: 0.5rem;
-      aspect-ratio: 1 / 1;
+    }
+    .github-link {
+      display: inline-block;
+      margin-top: 0.3rem;
+      color: #2ecc71;
+      text-decoration: none;
+      font-weight: bold;
     }
     footer {
       text-align: center;
@@ -125,13 +136,15 @@
       font-size: 0.9rem;
       color: #888;
     }
-    .project-card a {
-      text-decoration: none;
-      color: #0077cc;
-      font-size: 0.95rem;
+    .resume-download {
+      display: block;
+      margin-top: 1rem;
+      text-align: center;
     }
-    .project-card a:hover {
-      text-decoration: underline;
+    .resume-download a {
+      text-decoration: none;
+      color: #2ecc71;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -148,9 +161,9 @@
       <a href="mailto:gollkarthk@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
     <p class="phone"><i class="fas fa-phone"></i> +91-7209608470</p>
-    <a class="resume-link" href="assets/Golla_Karthik_Resume.pdf" target="_blank" title="Download Resume">
-      <i class="fas fa-download"></i> Download Resume
-    </a>
+    <div class="resume-download">
+      <a href="https://github.com/zlatangk/Golla_Karthik_Resume" target="_blank"><i class="fas fa-file-download"></i> Download Resume</a>
+    </div>
   </header>
 
   <section class="section">
@@ -160,25 +173,25 @@
 
   <section class="section">
     <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card">Project Management: Agile</div>
+    <div class="skills-container">
+      <div class="skill-card">Agile</div>
       <div class="skill-card">Scrum</div>
       <div class="skill-card">Cross-Functional Collaboration</div>
-      <div class="skill-card">Documentation: BRDs</div>
+      <div class="skill-card">BRDs</div>
       <div class="skill-card">FRDs</div>
       <div class="skill-card">Use Cases</div>
       <div class="skill-card">Test Cases</div>
-      <div class="skill-card">Testing: UAT</div>
-      <div class="skill-card">Regression</div>
+      <div class="skill-card">UAT</div>
+      <div class="skill-card">Regression Testing</div>
       <div class="skill-card">Test Plan Development</div>
       <div class="skill-card">Issue Resolution</div>
-      <div class="skill-card">Stakeholder Engagement</div>
       <div class="skill-card">Workshop Facilitation</div>
       <div class="skill-card">Change Management</div>
-      <div class="skill-card">Strategic Analysis</div>
+      <div class="skill-card">Business Process Mapping</div>
+      <div class="skill-card">Requirement Gathering</div>
       <div class="skill-card">Gap Analysis</div>
-      <div class="skill-card">Operational Efficiency Optimization</div>
-      <div class="skill-card">Tools: SQL</div>
+      <div class="skill-card">Operational Efficiency</div>
+      <div class="skill-card">SQL</div>
       <div class="skill-card">Python</div>
       <div class="skill-card">Excel</div>
       <div class="skill-card">Visio</div>
@@ -208,40 +221,40 @@
 
   <section class="section">
     <h2>Case Studies</h2>
-    <div class="project-card">
-      <h3>Pizza Runner SQL Case Study</h3>
-      <img src="images/pizza_runner.jpeg" alt="Pizza Runner SQL Case Study" class="project-img" />
-      <p>Explored delivery data to derive operational and performance insights using SQL.</p>
-      <a href="https://github.com/zlatangk/pizza_runner_sql_case-study" target="_blank">View GitHub Repo</a>
+    <div class="card-container">
+      <div class="card">
+        <h3>Pizza Runner SQL Case Study</h3>
+        <img src="images/pizza_runner.jpeg" alt="Pizza Runner SQL" class="project-img" />
+        <p>Explored delivery data to derive operational and performance insights using SQL.</p>
+        <a class="github-link" href="https://github.com/zlatangk/pizza_runner_sql_case-study" target="_blank">View Case Study</a>
+      </div>
+      <div class="card">
+        <h3>Danny's Diner SQL Case Study</h3>
+        <img src="images/dannys_diner.jpeg" alt="Danny's Diner SQL" class="project-img" />
+        <p>Analyzed customer purchase behavior and sales patterns to provide business recommendations.</p>
+        <a class="github-link" href="https://github.com/zlatangk/dannys-diner-sql" target="_blank">View Case Study</a>
+      </div>
+      <div class="card">
+        <h3>Pizza Hut SQL Case Study</h3>
+        <img src="images/pizza_hut.jpeg" alt="Pizza Hut SQL" class="project-img" />
+        <p>Evaluated restaurant performance metrics and optimized menu pricing using advanced SQL techniques.</p>
+        <a class="github-link" href="https://github.com/zlatangk/Pizza_hut_Analysis" target="_blank">View Case Study</a>
+      </div>
     </div>
-    <div class="project-card">
-      <h3>Danny's Diner SQL Case Study</h3>
-      <img src="images/dannys_diner.jpeg" alt="Danny's Diner SQL Case Study" class="project-img" />
-      <p>Analyzed customer purchase behavior and sales patterns to provide business recommendations.</p>
-      <a href="https://github.com/zlatangk/dannys-diner-sql" target="_blank">View GitHub Repo</a>
-    </div>
-    <div class="project-card">
-      <h3>Pizza Hut SQL Case Study</h3>
-      <img src="images/pizza_hut.jpeg" alt="Pizza Hut SQL Case Study" class="project-img" />
-      <p>Evaluated restaurant performance metrics and optimized menu pricing using advanced SQL techniques.</p>
-      <a href="https://github.com/zlatangk/Pizza_hut_Analysis" target="_blank">View GitHub Repo</a>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Education</h2>
-    <ul>
-      <li>MBA – HR & Marketing, Vignan Institute of Information Technology (2019–2021)</li>
-      <li>B.Tech – Manufacturing Engineering, NIFFT (2014–2018)</li>
-    </ul>
   </section>
 
   <section class="section">
     <h2>Academic Projects</h2>
-    <h3>Work Life Balance & Its Importance</h3>
-    <p>Studied impact of WFO vs. WFH models. Identified preference shift due to COVID-19, highlighting future of hybrid work culture.</p>
-    <h3>Consumer Perception on E-Vehicles</h3>
-    <p>Analyzed market data and customer preferences toward electric vehicle adoption and forecasted key trends in the EV industry.</p>
+    <div class="card-container">
+      <div class="card">
+        <h3>Work Life Balance & Its Importance</h3>
+        <p>Studied impact of WFO vs. WFH models. Identified preference shift due to COVID-19, highlighting future of hybrid work culture.</p>
+      </div>
+      <div class="card">
+        <h3>Consumer Perception on E-Vehicles</h3>
+        <p>Analyzed market data and customer preferences toward electric vehicle adoption and forecasted key trends in the EV industry.</p>
+      </div>
+    </div>
   </section>
 
   <footer>
