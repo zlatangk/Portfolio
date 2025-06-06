@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golla Karthik | Business Analyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light: #ecf0f1;
+            --dark: #121212;
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+
+        [data-theme="dark"] {
+            --primary: #3498db;
+            --secondary: #2c3e50;
+            --light: #121212;
+            --dark: #ecf0f1;
+            --card-bg: #1e1e1e;
+            --text: #f0f0f0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--secondary);
+            margin-bottom: 1rem;
+            background-color: #fff; /* Fallback if image missing */
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-links a:hover {
+            color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        
+        h3 {
+            color: var(--secondary);
+            margin: 1.5rem 0 0.5rem;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .company {
+            font-style: italic;
+            color: var(--text);
+            opacity: 0.8;
+        }
+        
+        ul {
+            padding-left: 1.2rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .project-card {
+            border-left: 4px solid var(--secondary);
+            padding-left: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .project-card h4 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .project-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 4px;
+            margin: 1rem 0;
+            border: 1px solid rgba(0,0,0,0.1);
+            background-color: #f8f9fa; /* Light gray background for placeholder */
+        }
+
+        [data-theme="dark"] .project-image {
+            border: 1px solid rgba(255,255,255,0.1);
+            background-color: #2d2d2d; /* Dark background for placeholder */
+        }
+        
+        .project-links {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .project-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--secondary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .project-links a:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        #theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .resume-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .resume-download:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .skills-container {
+                flex-direction: column;
+            }
+
+            #theme-toggle {
+                top: 10px;
+                right: 10px;
+                width: 35px;
+                height: 35px;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header>
+        <div class="container">
+            <img src="profile.jpg" alt="Golla Karthik" class="profile-img" onerror="this.src='https://i.imgur.com/JzQ7Q6a.png'">
+            <h1>GOLLA KARTHIK</h1>
+            <p class="tagline">Business Analyst | Data Enthusiast | Problem Solver</p>
+            <div class="contact-links">
+                <a href="mailto:gollkarthk@gmail.com"><i class="fas fa-envelope"></i> gollkarthk@gmail.com</a>
+                <a href="tel:7209608470"><i class="fas fa-phone"></i> 7209608470</a>
+                <a href="https://www.linkedin.com/in/gollakarthk/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/zlatangk" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://drive.google.com/file/d/1yKRcKd-UA_OfzCljO5gU-GcuQ3NkylgL/view?usp=drive_link" class="resume-download" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="profile">
+            <h2>Profile</h2>
+            <p>Dynamic and results-driven Business Analyst with over three years of experience in stakeholder engagement, project documentation, and comprehensive project delivery. Dedicated to enhancing efficiencies and providing solutions that align with organizational objectives through expertise in diverse analytical tools and methodologies.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Project Management</h3>
+                    <ul>
+                        <li>Agile</li>
+                        <li>Scrum</li>
+                        <li>Cross-Functional Collaboration</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Documentation & Requirements</h3>
+                    <ul>
+                        <li>BRDs</li>
+                        <li>FRDs</li>
+                        <li>Use Cases & Test Cases</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Testing & Validation</h3>
+                    <ul>
+                        <li>UAT</li>
+                        <li>Regression Testing</li>
+                        <li>Test Plan Development</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>SQL</li>
+                        <li>Python</li>
+                        <li>Excel</li>
+                        <li>Visio</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            
+            <div class="job-title">
+                <span>Business Analyst</span>
+                <span>May 2022 - Present</span>
+            </div>
+            <div class="company">Tata Consultancy Services</div>
+            <ul>
+                <li>Collaborated with cross-functional teams to collect, document, and analyze business requirements, resulting in a project success rate of 95% by ensuring alignment with strategic objectives</li>
+                <li>Authored detailed Business Requirements Documents (BRDs) and Functional Requirements Documents (FRDs), expediting development timelines by 15%</li>
+                <li>Executed comprehensive test plans achieving 90% reduction in post-deployment issues</li>
+                <li>Oversaw ERP change management initiatives with 100% adoption rate</li>
+            </ul>
+            
+            <div class="job-title">
+                <span>Recruitment Associate</span>
+                <span>2021</span>
+            </div>
+            <div class="company">BYJU'S</div>
+            <ul>
+                <li>Managed end-to-end recruitment process including candidate sourcing and screening</li>
+                <li>Utilized platforms like LinkedIn and Naukri to build candidate pipelines</li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="job-title">
+                <span>MBA, HR & Marketing</span>
+                <span>2019 - 2021</span>
+            </div>
+            <div class="company">Vignan Institute of Information Technology</div>
+            
+            <div class="job-title" style="margin-top: 1rem;">
+                <span>B.Tech, Manufacturing Engineering</span>
+                <span>2014 - 2018</span>
+            </div>
+            <div class="company">National Institute of Foundry and Forge Technology</div>
+        </section>
+
+        <section id="projects">
+            <h2>Academic Projects</h2>
+            
+            <div class="project-card">
+                <h4>WORK LIFE BALANCE & ITS IMPORTANCE</h4>
+                <p>Analyzed factors affecting work-life balance, identifying Work from Office (WFO) and Work from Home (WFH) as standout contributors. Investigated the impact of COVID-19 on employee preferences, noting a shift towards WFH over WFO.</p>
+            </div>
+            
+            <div class="project-card">
+                <h4>CONSUMER PERCEPTION ON E-VEHICLES</h4>
+                <p>Analyzed comprehensive secondary data to draw conclusions on consumer perceptions of e-vehicles. Forecasted market trends and examined the shift in customer preferences towards adopting electric vehicles.</p>
+            </div>
+        </section>
+
+        <section id="case-studies">
+            <h2>Case Studies</h2>
+            
+            <div class="project-card">
+                <h4>Pizza Hut Analysis</h4>
+                <p>Comprehensive analysis of Pizza Hut's business operations, customer preferences, and market positioning using data analytics techniques.</p>
+                <img src="pizza-hut-dashboard.png" alt="Pizza Hut Dashboard" class="project-image" onerror="this.src='https://via.placeholder.com/800x400/2c3e50/ecf0f1?text=Pizza+Hut+Dashboard'">
+                <div class="project-links">
+                    <a href="https://github.com/zlatangk/Pizza_hut_Analysis" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
+                    <a href="https://github.com/zlatangk/Pizza_hut_Analysis" target="_blank" rel="noopener noreferrer"><i class="fas fa-expand"></i> View Full Analysis</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <h4>Danny's Diner - SQL Analysis</h4>
+                <p>An SQL case study analyzing customer behavior, sales patterns, and menu performance for Danny's Diner using advanced SQL queries.</p>
+                <img src="danny-diner-sql.png" alt="Danny's Diner SQL Analysis" class="project-image" onerror="this.src='https://via.placeholder.com/800x400/3498db/ffffff?text=Danny+Diner+SQL'">
+                <div class="project-links">
+                    <a href="https://github.com/zlatangk/dannys-diner-sql" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <h4>Pizza Runner - SQL Case Study</h4>
+                <p>A data analysis project examining delivery performance, customer satisfaction, and operational efficiency for Pizza Runner using SQL.</p>
+                <img src="pizza-runner-sql.png" alt="Pizza Runner SQL Analysis" class="project-image" onerror="this.src='https://via.placeholder.com/800x400/e74c3c/ffffff?text=Pizza+Runner+SQL'">
+                <div class="project-links">
+                    <a href="https://github.com/zlatangk/pizza_runner_sql_case-study" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+
+        // Check for saved theme preference or use system preference
+        const savedTheme = localStorage.getItem('theme') || 
+                         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        
+        // Apply saved theme
+        if (savedTheme === 'dark') {
+            body.setAttribute('data-theme', 'dark');
+            icon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        // Toggle theme on button click
+        themeToggle.addEventListener('click', () => {
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.setAttribute('data-theme', 'light');
+                icon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                icon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fallback for images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                if (!img.complete || img.naturalWidth === 0) {
+                    if (img.hasAttribute('onerror')) {
+                        img.setAttribute('src', img.getAttribute('onerror').split("'")[1]);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
