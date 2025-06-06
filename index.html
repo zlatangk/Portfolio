@@ -65,19 +65,6 @@
       color: #555;
       margin-top: 0.3rem;
     }
-    .resume-download {
-      display: block;
-      margin-top: 1rem;
-      text-align: center;
-    }
-    .resume-download a {
-      text-decoration: none;
-      color: #2ecc71;
-      font-weight: bold;
-    }
-    .resume-download a:hover {
-      color: #27ae60;
-    }
     .toggle-theme {
       position: fixed;
       top: 20px;
@@ -86,11 +73,6 @@
       border: none;
       font-size: 1.5rem;
       cursor: pointer;
-      color: #2ecc71;
-      transition: color 0.3s ease;
-    }
-    .toggle-theme:hover {
-      color: #27ae60;
     }
     .section {
       max-width: 900px;
@@ -99,7 +81,6 @@
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       padding: 2rem;
-      transition: background-color 0.3s ease, color 0.3s ease;
     }
     body.dark .section {
       background: #1e1e1e;
@@ -108,7 +89,50 @@
       color: #2ecc71;
       margin-bottom: 1rem;
     }
-    /* Education and Projects cards */
+
+    /* Updated Skills section styles */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      justify-items: center;
+    }
+    .skill-item {
+      background: #d1fae5;
+      border-radius: 10px;
+      padding: 8px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    body.dark .skill-item {
+      background: #2ecc71;
+      color: #121212;
+      box-shadow: none;
+    }
+    .skill-icon {
+      font-size: 24px; /* smaller icons */
+      margin-bottom: 6px;
+      color: #27ae60;
+      transition: color 0.3s ease;
+    }
+    body.dark .skill-icon {
+      color: #145214;
+    }
+    .skill-label {
+      font-size: 0.85rem; /* smaller text */
+      text-align: center;
+      font-weight: 600;
+      color: #222;
+    }
+    body.dark .skill-label {
+      color: #121212;
+    }
+
+    /* Rest of your original styles */
     .card-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -121,7 +145,9 @@
       padding: 1rem;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
       color: #222;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     body.dark .card {
       background-color: #2a2a2a;
@@ -148,46 +174,6 @@
     .github-link:hover {
       color: #27ae60;
     }
-    /* Skill Section styles */
-    .skill-category {
-      margin-bottom: 2rem;
-    }
-    .skill-category h3 {
-      color: #2ecc71;
-      margin-bottom: 0.8rem;
-    }
-    .skill-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 1rem;
-    }
-    .skill-card {
-      background-color: #d1fae5;
-      border-radius: 12px;
-      padding: 1rem 0.5rem;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      color: #222;
-      font-weight: 600;
-      user-select: none;
-      transition: background-color 0.3s ease;
-      cursor: default;
-    }
-    .skill-card i {
-      margin-bottom: 0.4rem;
-      color: #27ae60;
-    }
-    .skill-card:hover {
-      background-color: #a3f7c1;
-    }
-    body.dark .skill-card {
-      background-color: #2ecc71;
-      color: #121212;
-    }
-    body.dark .skill-card i {
-      color: #145a32;
-    }
-    /* Footer */
     footer {
       text-align: center;
       margin-top: 2rem;
@@ -195,12 +181,26 @@
       font-size: 0.9rem;
       color: #888;
     }
+    .resume-download {
+      display: block;
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .resume-download a {
+      text-decoration: none;
+      color: #2ecc71;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .resume-download a:hover {
+      color: #27ae60;
+    }
   </style>
 </head>
 <body>
   <button class="toggle-theme" title="Toggle Light/Dark">🌙</button>
   <header>
-    <img src="images/profile_profile.jpg" alt="Profile Photo" class="profile-photo" />
+    <img src="profile.jpg" alt="Profile Photo" class="profile-photo" />
     <h1>Golla Karthik</h1>
     <p class="title">Business Analyst</p>
     <div class="social-links">
@@ -213,6 +213,100 @@
       <a href="https://github.com/zlatangk/Golla_Karthik_Resume.pdf" target="_blank"><i class="fas fa-download"></i> Download Resume</a>
     </div>
   </header>
+
+  <section class="section">
+    <h2>Profile Summary</h2>
+    <p>
+      Dynamic and results-driven Business Analyst with over three years of experience in stakeholder engagement, project documentation, and comprehensive project delivery. Dedicated to enhancing efficiencies and providing solutions that align with organizational objectives through expertise in diverse analytical tools and methodologies. Skilled in facilitating communication between clients and technical teams to ensure successful project execution. Demonstrated success in mentorship, performance management, and requirements analysis and proficient in evaluating business processes and promoting user-focused product improvements.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <i class="fas fa-project-diagram skill-icon" title="Project Management"></i>
+        <div class="skill-label">Project Management:<br> Agile, Scrum</div>
+      </div>
+      <div class="skill-item">
+        <i class="fas fa-file-alt skill-icon" title="Documentation & Requirements"></i>
+        <div class="skill-label">Documentation:<br> BRDs, FRDs, Use Cases</div>
+      </div>
+      <div class="skill-item">
+        <i class="fas fa-vial skill-icon" title="Testing & Validation"></i>
+        <div class="skill-label">Testing & Validation:<br> UAT, Regression</div>
+      </div>
+      <div class="skill-item">
+        <i class="fas fa-users skill-icon" title="Stakeholder Engagement"></i>
+        <div class="skill-label">Stakeholder Engagement:<br> Workshops, Change Management</div>
+      </div>
+      <div class="skill-item">
+        <i class="fas fa-search skill-icon" title="Strategic Analysis"></i>
+        <div class="skill-label">Strategic Analysis:<br> Gap Analysis, Optimization</div>
+      </div>
+      <div class="skill-item">
+        <i class="fas fa-tools skill-icon" title="Tools"></i>
+        <div class="skill-label">Tools:<br> SQL, Python, Excel, Visio</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Work Experience</h2>
+    <p><strong>TCS — Business Analyst</strong><br />May 2022 to Present</p>
+    <ul>
+      <li>Collaborated with cross-functional teams to collect, document, and analyze business requirements, resulting in a project success rate of 95% by ensuring alignment with strategic objectives.</li>
+      <li>Executed collaborative gap analysis to ensure thorough Functional and Integration testing across diverse application modules and custom components, engaging with cross-functional teams to clarify requirements, ultimately achieving a 20% decrease in design modifications.</li>
+      <li>Authored detailed Business Requirements Documents (BRDs), Functional Requirements Documents (FRDs), and use case scenarios, functional test cases, and scenario documentation, which contributed to improved project clarity and expedited development timelines by 15%.</li>
+      <li>Facilitated workshops and stakeholder meetings to effectively gather input, resulting in a 20% increase in Client satisfaction and enhanced project buy-in across various departments.</li>
+      <li>Executed & implemented comprehensive test plans, designs, and development processes, to ensure that solutions met established requirements, achieving a 90% reduction in post-deployment issues.</li>
+      <li>Successfully implemented a thorough transformation in the delivery of Performance Management, Career Development, Succession Planning, and Collaborative Workspace modules. Additionally, provided support to clients during the post-Transition and Deployment phase by addressing Queries related to service delivery, managing incidents, and processing change and service requests.</li>
+      <li>Oversaw ERP change management initiatives, developing training materials and documentation that led to a 100% adoption rate and ensured a seamless transition for users.</li>
+    </ul>
+    <p><strong>BYJU’S — Recruitment Associate</strong><br />2021</p>
+    <ul>
+      <li>Managed the entire recruitment process, which included sourcing candidates, performing initial screenings via telephone interviews, and facilitating Zoom interviews with selected candidates.</li>
+      <li>Oversaw a pipeline of prospective candidates by utilizing diverse recruitment platforms such as LinkedIn and Naukri to source, evaluate, and select suitable candidates.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Case Studies</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="images/pizza_runner.jpeg" alt="Pizza Runner Case Study" class="project-img" />
+        <h3>Pizza Runner SQL Case Study</h3>
+        <p>Analyzed and optimized SQL queries for the Pizza Runner database to improve operational reporting and business insights.</p>
+        <a href="https://github.com/zlatangk/pizza_runner_sql_case-study" target="_blank" class="github-link">View Case Study</a>
+      </div>
+      <div class="card">
+        <img src="images/dannys_diner.jpeg" alt="Danny's Diner Case Study" class="project-img" />
+        <h3>Danny's Diner SQL Case Study</h3>
+        <p>Conducted detailed data analysis and visualization to assist in strategic decision-making for Danny’s Diner operations.</p>
+        <a href="https://github.com/zlatangk/dannys-diner-sql" target="_blank" class="github-link">View Case Study</a>
+      </div>
+      <div class="card">
+        <img src="images/pizza_hut.jpeg" alt="Pizza Hut Case Study" class="project-img" />
+        <h3>Pizza Hut Analysis Case Study</h3>
+        <p>Performed comprehensive business analysis and reporting for Pizza Hut’s sales and customer data.</p>
+        <a href="https://github.com/zlatangk/Pizza_hut_Analysis" target="_blank" class="github-link">View Case Study</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Academic Projects</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Work Life Balance & Its Importance</h3>
+        <p>Analyzed factors affecting work‑life balance, identifying Work from Office (WFO) and Work from Home (WFH) as standout contributors. Investigated the impact of COVID‑19 on employee preferences, noting a shift towards WFH over WFO which concludes that the WFH/ Hybrid model is a forward‑looking approach for organizational work culture.</p>
+      </div>
+      <div class="card">
+        <h3>Consumer Perception on E-Vehicles</h3>
+        <p>Analyzed comprehensive secondary data to draw conclusions on consumer perceptions of e‑vehicles. Forecasted market trends for e‑vehicles and examined the shift in customer preferences towards adopting electric vehicles.</p>
+      </div>
+    </div>
+  </section>
 
   <section class="section">
     <h2>Education</h2>
@@ -230,169 +324,18 @@
     </div>
   </section>
 
-  <section class="section">
-    <h2>Skills</h2>
-
-    <div class="skill-category">
-      <h3>Project Management</h3>
-      <div class="skill-grid">
-        <div class="skill-card">
-          <i class="fas fa-project-diagram fa-2x"></i>
-          <span>Agile</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-tasks fa-2x"></i>
-          <span>Scrum</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-users-cog fa-2x"></i>
-          <span>Collaboration</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h3>Documentation & Requirements</h3>
-      <div class="skill-grid">
-        <div class="skill-card">
-          <i class="fas fa-file-alt fa-2x"></i>
-          <span>BRDs</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-file-contract fa-2x"></i>
-          <span>FRDs</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-clipboard-list fa-2x"></i>
-          <span>Use Cases</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-vials fa-2x"></i>
-          <span>Test Cases</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h3>Testing & Validation</h3>
-      <div class="skill-grid">
-        <div class="skill-card">
-          <i class="fas fa-check-square fa-2x"></i>
-          <span>UAT</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-redo fa-2x"></i>
-          <span>Regression</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-file-signature fa-2x"></i>
-          <span>Test Plans</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-bug fa-2x"></i>
-          <span>Issue Resolution</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h3>Tools</h3>
-      <div class="skill-grid">
-        <div class="skill-card">
-          <i class="fas fa-database fa-2x"></i>
-          <span>SQL</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-python fa-2x"></i>
-          <span>Python</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-file-excel fa-2x"></i>
-          <span>Excel</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-drafting-compass fa-2x"></i>
-          <span>Visio</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-file-powerpoint fa-2x"></i>
-          <span>PowerPoint</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-file-word fa-2x"></i>
-          <span>Word</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-tasks fa-2x"></i>
-          <span>Planner</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Case Studies</h2>
-    <div class="card-container">
-      <div class="card">
-        <img
-          src="images/pizza_runner.jpeg"
-          alt="Pizza Runner Case Study"
-          class="project-img"
-        />
-        <h3>Pizza Runner SQL Case Study</h3>
-        <p>Analysis and insights using SQL for Pizza Runner data.</p>
-        <a
-          href="https://github.com/zlatangk/pizza_runner_sql_case-study"
-          target="_blank"
-          class="github-link"
-          >View Case Study</a
-        >
-      </div>
-      <div class="card">
-        <img
-          src="images/dannys_diner.jpeg"
-          alt="Danny's Diner Case Study"
-          class="project-img"
-        />
-        <h3>Danny's Diner SQL Case Study</h3>
-        <p>SQL-based analysis of restaurant data to optimize operations.</p>
-        <a
-          href="https://github.com/zlatangk/dannys-diner-sql"
-          target="_blank"
-          class="github-link"
-          >View Case Study</a
-        >
-      </div>
-      <div class="card">
-        <img
-          src="images/pizza_hut.jpeg"
-          alt="Pizza Hut Analysis"
-          class="project-img"
-        />
-        <h3>Pizza Hut Analysis</h3>
-        <p>Comprehensive data analysis case study for Pizza Hut.</p>
-        <a
-          href="https://github.com/zlatangk/Pizza_hut_Analysis"
-          target="_blank"
-          class="github-link"
-          >View Case Study</a
-        >
-      </div>
-    </div>
-  </section>
-
   <footer>
     &copy; 2025 Golla Karthik. All rights reserved.
   </footer>
 
   <script>
-    const toggleButton = document.querySelector('.toggle-theme');
-    toggleButton.addEventListener('click', () => {
+    const toggleBtn = document.querySelector('.toggle-theme');
+    toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('dark');
       if(document.body.classList.contains('dark')){
-        toggleButton.textContent = '☀️';
+        toggleBtn.textContent = '☀️';
       } else {
-        toggleButton.textContent = '🌙';
+        toggleBtn.textContent = '🌙';
       }
     });
   </script>
