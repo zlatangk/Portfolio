@@ -6,100 +6,54 @@
   <title>Golla Karthik | Portfolio</title>
   <style>
     * {
-      box-sizing: border-box;
-      margin: 0; padding: 0;
+      margin: 0; padding: 0; box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      transition: background-color 0.3s, color 0.3s;
     }
     body {
-      background-color: #f5f7fa;
+      background: #f4f4f4;
       color: #222;
       line-height: 1.6;
-      padding: 20px;
+      transition: all 0.3s ease;
+      padding-bottom: 60px;
     }
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-    a:hover {
-      color: #005fa3;
+    body.dark {
+      background: #121212;
+      color: #e0e0e0;
     }
     header {
       text-align: center;
-      margin-bottom: 2rem;
+      padding: 2rem 1rem;
     }
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.3rem;
-    }
-    header p {
-      font-size: 1.1rem;
-      color: #555;
-    }
-    .photo {
+    header img.profile-photo {
       width: 140px;
       height: 140px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #0077cc;
-      margin: 1rem auto;
-      display: block;
-    }
-    section {
-      max-width: 800px;
-      margin: 0 auto 2rem;
-      background: white;
-      padding: 1.5rem 2rem;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-    h2 {
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #0077cc;
-      padding-bottom: 0.3rem;
-      color: #0077cc;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    li {
       margin-bottom: 1rem;
     }
-    .work-title {
-      font-weight: bold;
-      font-size: 1.1rem;
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.2rem;
     }
-    .company {
-      color: #555;
-      font-style: italic;
-      margin-left: 0.3rem;
+    header p.title {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 0.5rem;
     }
-    .dates {
-      float: right;
-      font-size: 0.9rem;
-      color: #999;
+    .social-links {
+      margin-bottom: 1rem;
     }
-    .project-link {
-      font-weight: bold;
-    }
-    .btn {
-      background-color: #0077cc;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-      margin-top: 1rem;
-      transition: background-color 0.3s;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
+    .social-links a {
       text-decoration: none;
+      color: #0077cc;
+      margin: 0 0.8rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
     }
-    .btn:hover {
-      background-color: #005fa3;
+    .social-links a:hover {
+      color: #004a80;
     }
     .toggle-theme {
       position: fixed;
@@ -107,99 +61,174 @@
       right: 20px;
       background: none;
       border: none;
-      cursor: pointer;
       font-size: 1.5rem;
-      user-select: none;
-      color: #0077cc;
+      cursor: pointer;
     }
-    .toggle-theme:hover {
-      color: #005fa3;
+    .section {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 2rem;
     }
-    .contact-icons {
-      margin-top: 0.5rem;
-    }
-    .contact-icons a {
-      margin: 0 0.5rem;
-      font-size: 1.2rem;
-    }
-    /* Dark mode */
-    body.dark {
-      background-color: #121212;
-      color: #ddd;
-    }
-    body.dark section {
+    body.dark .section {
       background: #1e1e1e;
-      box-shadow: 0 5px 15px rgba(255,255,255,0.05);
     }
-    body.dark a {
-      color: #66aaff;
+    h2 {
+      color: #0077cc;
+      margin-bottom: 1rem;
     }
-    body.dark .toggle-theme {
-      color: #66aaff;
+    .skills, .education ul, .experience, .project-card {
+      margin-bottom: 1rem;
+    }
+    .project-img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #0077cc;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-
-  <button class="toggle-theme" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">🌙</button>
+  <button class="toggle-theme" title="Toggle Light/Dark">🌙</button>
 
   <header>
+    <img
+      src="images/profile_photo.jpg"
+      alt="Golla Karthik Profile Photo"
+      class="profile-photo"
+    />
     <h1>Golla Karthik</h1>
-    <p>Business Analyst | SQL Enthusiast | Data Storyteller</p>
-    <img src="https://avatars.githubusercontent.com/u/13687507?v=4" alt="Golla Karthik" class="photo" />
-    <div class="contact-icons">
-      <a href="mailto:gollkarthk@gmail.com" title="Email">📧</a>
-      <a href="https://www.linkedin.com/in/gollakarthk/" target="_blank" title="LinkedIn">🔗</a>
-      <a href="https://github.com/zlatangk" target="_blank" title="GitHub">💻</a>
+    <p class="title">Business Analyst | SQL Enthusiast | Data Storyteller</p>
+    <div class="social-links">
+      <a href="https://github.com/zlatangk" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/gollakarthk/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:gollkarthk@gmail.com">Email</a>
     </div>
   </header>
 
-  <section>
+  <section class="section">
+    <h2>Profile Summary</h2>
+    <p>
+      Dynamic and results-driven Business Analyst with over three years of
+      experience in stakeholder engagement, project documentation, and
+      comprehensive project delivery. Dedicated to enhancing efficiencies and
+      providing solutions that align with organizational objectives through
+      expertise in diverse analytical tools and methodologies. Skilled in
+      facilitating communication between clients and technical teams to ensure
+      successful project execution. Demonstrated success in mentorship,
+      performance management, and requirements analysis and proficient in
+      evaluating business processes and promoting user-focused product
+      improvements.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Skills</h2>
+    <div class="skills">
+      <strong>Project Management:</strong> Agile, Scrum, Cross-Functional
+      Collaboration<br />
+      <strong>Documentation:</strong> BRDs, FRDs, Use Cases, Test Cases<br />
+      <strong>Testing:</strong> UAT, Regression, Issue Resolution<br />
+      <strong>Stakeholder Engagement:</strong> Workshop Facilitation, Change
+      Management<br />
+      <strong>Analysis:</strong> Requirement Gathering, Gap Analysis,
+      Efficiency Optimization<br />
+      <strong>Tools:</strong> SQL, Python, Excel, Visio, PowerPoint, Planner
+    </div>
+  </section>
+
+  <section class="section">
     <h2>Work Experience</h2>
+    <div class="experience">
+      <strong>TCS - Business Analyst (May 2022 - Present)</strong>
+      <ul>
+        <li>
+          Collected, documented, and analyzed business requirements with a 95%
+          success rate in project alignment.
+        </li>
+        <li>Executed collaborative gap analysis reducing design changes by 20%.</li>
+        <li>
+          Authored BRDs, FRDs, test cases improving clarity and reducing
+          development time by 15%.
+        </li>
+        <li>Facilitated workshops boosting stakeholder satisfaction by 20%.</li>
+        <li>Implemented detailed test plans, achieving 90% issue reduction post-deployment.</li>
+        <li>
+          Managed performance &amp; career modules, aiding service transition &amp;
+          change management.
+        </li>
+        <li>Led ERP change management with 100% user adoption.</li>
+      </ul>
+      <br />
+      <strong>BYJU’S - Recruitment Associate (2021)</strong>
+      <ul>
+        <li>Handled end-to-end recruitment from sourcing to interview coordination.</li>
+        <li>Utilized platforms like LinkedIn and Naukri to build a strong candidate pipeline.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Professional SQL Case Studies</h2>
+    <div class="project-card">
+      <img src="images/pizza_runner.png" alt="Pizza Runner Project Screenshot" class="project-img" />
+      <strong>Pizza Runner SQL Case Study</strong>
+      <p>Analyzed delivery patterns, runner performance, and customer behavior using SQL.</p>
+      <a class="btn" href="https://github.com/zlatangk/pizza_runner_sql_case-study" target="_blank">View Project</a>
+    </div>
+    <div class="project-card">
+      <img src="images/dannys_diner.png" alt="Danny's Diner Screenshot" class="project-img" />
+      <strong>Danny's Diner SQL</strong>
+      <p>Examined customer purchasing behavior to derive key insights for business improvement.</p>
+      <a class="btn" href="https://github.com/zlatangk/dannys-diner-sql" target="_blank">View Project</a>
+    </div>
+    <div class="project-card">
+      <img src="images/pizza_hut.png" alt="Pizza Hut Project Screenshot" class="project-img" />
+      <strong>Pizza Hut Analysis</strong>
+      <p>Used SQL to analyze operational trends and customer preferences at Pizza Hut outlets.</p>
+      <a class="btn" href="https://github.com/zlatangk/Pizza_hut_Analysis" target="_blank">View Project</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Academic Projects</h2>
+    <div class="project-card">
+      <strong>Work-Life Balance & Its Importance</strong>
+      <p>
+        Studied WFO vs. WFH post-COVID and found hybrid models better suit modern
+        work cultures.
+      </p>
+    </div>
+    <div class="project-card">
+      <strong>Consumer Perception on E-Vehicles</strong>
+      <p>Researched customer trends and preferences indicating growth in electric vehicle adoption.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Education</h2>
     <ul>
-      <li>
-        <span class="work-title">Business Analyst</span>
-        <span class="company">@ Tata Consultancy Services</span>
-        <span class="dates">2021 - Present</span>
-        <p>3+ years of experience in business analysis, SQL, Agile delivery, stakeholder communication, and data-driven decision-making.</p>
-      </li>
+      <li>MBA in HR & Marketing, Vignan Institute of Information Technology (2019–2021)</li>
+      <li>B.Tech in Manufacturing Engineering, NIFFT (2014–2018)</li>
     </ul>
-  </section>
-
-  <section>
-    <h2>SQL Case Studies</h2>
-    <ul>
-      <li><a href="https://github.com/zlatangk/Pizza_hut_Analysis" class="project-link" target="_blank">🍕 Pizza Hut Analysis</a></li>
-      <li><a href="https://github.com/zlatangk/dannys-diner-sql" class="project-link" target="_blank">🍽️ Danny's Diner SQL</a></li>
-      <li><a href="https://github.com/zlatangk/pizza_runner_sql_case-study" class="project-link" target="_blank">🚴 Pizza Runner SQL Case Study</a></li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Resume</h2>
-    <a href="Golla_Karthik_Resume.pdf" download class="btn">⬇️ Download Resume</a>
-  </section>
-
-  <script>
-    const toggleBtn = document.querySelector('.toggle-theme');
-    const body = document.body;
-
-    if (localStorage.getItem('theme') === 'dark') {
-      body.classList.add('dark');
-      toggleBtn.textContent = '☀️';
-    }
-
-    toggleBtn.addEventListener('click', () => {
-      body.classList.toggle('dark');
-      if (body.classList.contains('dark')) {
-        toggleBtn.textContent = '☀️';
-        localStorage.setItem('theme', 'dark');
-      } else {
-        toggleBtn.textContent = '🌙';
-        localStorage.setItem('theme', 'light');
-      }
-    });
-  </script>
-
-</body>
-</html>
+  </sectio
