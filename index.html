@@ -89,36 +89,30 @@
       color: #2ecc71;
       margin-bottom: 1rem;
     }
-    /* Updated Skills container */
+
+    /* Skills container as flex with small pill cards */
     .skills-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem 0.8rem;
+      gap: 8px 12px;
     }
-    /* Tiny pill-shaped skill cards */
     .skill-card {
       background-color: #d1fae5;
-      padding: 0.35rem 0.9rem;
+      padding: 6px 15px;
       border-radius: 20px;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: #222;
       white-space: nowrap;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      transition: background-color 0.3s ease, color 0.3s ease;
-      cursor: default;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
       user-select: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     body.dark .skill-card {
       background-color: #2ecc71;
       color: #121212;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+      box-shadow: none;
     }
-    .skill-category {
-      font-weight: 600;
-      margin-right: 0.5rem;
-      color: #27ae60;
-      white-space: nowrap;
-    }
+
     .card-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -131,6 +125,9 @@
       padding: 1rem;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
       color: #222;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     body.dark .card {
       background-color: #2a2a2a;
@@ -152,9 +149,10 @@
       color: #2ecc71;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
     .github-link:hover {
-      text-decoration: underline;
+      color: #27ae60;
     }
     footer {
       text-align: center;
@@ -172,13 +170,17 @@
       text-decoration: none;
       color: #2ecc71;
       font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .resume-download a:hover {
+      color: #27ae60;
     }
   </style>
 </head>
 <body>
   <button class="toggle-theme" title="Toggle Light/Dark">🌙</button>
   <header>
-    <img src="images/profile_profile.jpg" alt="Profile Photo" class="profile-photo" />
+    <img src="images/profile_photo.jpg" alt="Profile Photo" class="profile-photo" />
     <h1>Golla Karthik</h1>
     <p class="title">Business Analyst</p>
     <div class="social-links">
@@ -202,59 +204,53 @@
   <section class="section">
     <h2>Skills</h2>
     <div class="skills-container">
-      <div class="skill-card"><span class="skill-category">Project Management:</span> Agile, Scrum, Cross-Functional Collaboration</div>
-      <div class="skill-card"><span class="skill-category">Documentation & Requirements:</span> BRDs, FRDs, Use Cases & Test Cases</div>
-      <div class="skill-card"><span class="skill-category">Testing & Validation:</span> UAT, Regression, Test Plan Development, Issue Resolution</div>
-      <div class="skill-card"><span class="skill-category">Stakeholder Engagement:</span> Workshop Facilitation, Change Management, Business Process Mapping</div>
-      <div class="skill-card"><span class="skill-category">Strategic Analysis:</span> Requirement Gathering, Gap Analysis, Operational Efficiency Optimization</div>
-      <div class="skill-card"><span class="skill-category">Tools:</span> SQL, Python, Excel, Visio, PowerPoint, Word, Planner</div>
+      <div class="skill-card">Project Management: Agile, Scrum, Cross-Functional Collaboration</div>
+      <div class="skill-card">Documentation & Requirements: BRDs, FRDs, Use Cases & Test Cases</div>
+      <div class="skill-card">Testing & Validation: UAT, Regression, Test Plan Development, Issue Resolution</div>
+      <div class="skill-card">Stakeholder Engagement: Workshop Facilitation, Change Management, Business Process Mapping</div>
+      <div class="skill-card">Strategic Analysis: Requirement Gathering, Gap Analysis, Operational Efficiency Optimization</div>
+      <div class="skill-card">Tools: SQL, Python, Excel, Visio, PowerPoint, Word, Planner</div>
     </div>
   </section>
 
   <section class="section">
     <h2>Work Experience</h2>
-    <div class="card">
-      <h3>TCS - Business Analyst</h3>
-      <p><em>May 2022 to Present</em></p>
-      <ul>
-        <li>Collaborated with cross-functional teams to collect, document, and analyze business requirements, resulting in a project success rate of 95% by ensuring alignment with strategic objectives.</li>
-        <li>Executed collaborative gap analysis to ensure thorough Functional and Integration testing across diverse application modules and custom components, engaging with cross-functional teams to clarify requirements, ultimately achieving a 20% decrease in design modifications.</li>
-        <li>Authored detailed Business Requirements Documents (BRDs), Functional Requirements Documents (FRDs), and use case scenarios, functional test cases, and scenario documentation, which contributed to improved project clarity and expedited development timelines by 15%.</li>
-        <li>Facilitated workshops and stakeholder meetings to effectively gather input, resulting in a 20% increase in Client satisfaction and enhanced project buy-in across various departments.</li>
-        <li>Executed & implemented comprehensive test plans, designs, and development processes, to ensure that solutions met established requirements, achieving a 90% reduction in post-deployment issues.</li>
-        <li>Successfully implemented a thorough transformation in the delivery of Performance Management, Career Development, Succession Planning, and Collaborative Workspace modules. Additionally, provided support to clients during the post-Transition and Deployment phase by addressing Queries related to service delivery, managing incidents, and processing change and service requests.</li>
-        <li>Oversaw ERP change management initiatives, developing training materials and documentation that led to a 100% adoption rate and ensured a seamless transition for users.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>BYJU’S - Recruitment Associate</h3>
-      <p><em>2021</em></p>
-      <ul>
-        <li>Managed the entire recruitment process, including sourcing candidates, initial telephone screenings, and facilitating Zoom interviews to evaluate suitability.</li>
-        <li>Utilized diverse recruitment platforms such as LinkedIn and Naukri to source, evaluate, and select suitable candidates.</li>
-      </ul>
-    </div>
+    <p><strong>TCS — Business Analyst</strong><br />May 2022 to Present</p>
+    <ul>
+      <li>Collaborated with cross-functional teams to collect, document, and analyze business requirements, resulting in a project success rate of 95% by ensuring alignment with strategic objectives.</li>
+      <li>Executed collaborative gap analysis to ensure thorough Functional and Integration testing across diverse application modules and custom components, engaging with cross-functional teams to clarify requirements, ultimately achieving a 20% decrease in design modifications.</li>
+      <li>Authored detailed Business Requirements Documents (BRDs), Functional Requirements Documents (FRDs), and use case scenarios, functional test cases, and scenario documentation, which contributed to improved project clarity and expedited development timelines by 15%.</li>
+      <li>Facilitated workshops and stakeholder meetings to effectively gather input, resulting in a 20% increase in Client satisfaction and enhanced project buy-in across various departments.</li>
+      <li>Executed & implemented comprehensive test plans, designs, and development processes, to ensure that solutions met established requirements, achieving a 90% reduction in post-deployment issues.</li>
+      <li>Successfully implemented a thorough transformation in the delivery of Performance Management, Career Development, Succession Planning, and Collaborative Workspace modules. Additionally, provided support to clients during the post-Transition and Deployment phase by addressing Queries related to service delivery, managing incidents, and processing change and service requests.</li>
+      <li>Oversaw ERP change management initiatives, developing training materials and documentation that led to a 100% adoption rate and ensured a seamless transition for users.</li>
+    </ul>
+    <p><strong>BYJU’S — Recruitment Associate</strong><br />2021</p>
+    <ul>
+      <li>Managed the entire recruitment process, which included sourcing candidates, performing initial screenings via telephone interviews, and facilitating Zoom interviews with selected candidates.</li>
+      <li>Oversaw a pipeline of prospective candidates by utilizing diverse recruitment platforms such as LinkedIn and Naukri to source, evaluate, and select suitable candidates.</li>
+    </ul>
   </section>
 
   <section class="section">
     <h2>Case Studies</h2>
     <div class="card-container">
       <div class="card">
-        <img src="images/pizza_runner.jpeg" alt="Pizza Runner" class="project-img" />
+        <img src="images/pizza_runner.jpeg" alt="Pizza Runner Case Study" class="project-img" />
         <h3>Pizza Runner SQL Case Study</h3>
-        <p>Comprehensive SQL analysis and reporting for the Pizza Runner database.</p>
+        <p>Analyzed and optimized SQL queries for the Pizza Runner database to improve operational reporting and business insights.</p>
         <a href="https://github.com/zlatangk/pizza_runner_sql_case-study" target="_blank" class="github-link">View Case Study</a>
       </div>
       <div class="card">
-        <img src="images/dannys_diner.jpeg" alt="Danny's Diner" class="project-img" />
+        <img src="images/dannys_diner.jpeg" alt="Danny's Diner Case Study" class="project-img" />
         <h3>Danny's Diner SQL Case Study</h3>
-        <p>In-depth SQL case study focused on restaurant data and insights.</p>
+        <p>Conducted detailed data analysis and visualization to assist in strategic decision-making for Danny’s Diner operations.</p>
         <a href="https://github.com/zlatangk/dannys-diner-sql" target="_blank" class="github-link">View Case Study</a>
       </div>
       <div class="card">
-        <img src="images/pizza_hut.jpeg" alt="Pizza Hut Analysis" class="project-img" />
+        <img src="images/pizza_hut.jpeg" alt="Pizza Hut Case Study" class="project-img" />
         <h3>Pizza Hut Analysis Case Study</h3>
-        <p>Analysis of Pizza Hut data to provide business insights.</p>
+        <p>Performed comprehensive business analysis and reporting for Pizza Hut’s sales and customer data.</p>
         <a href="https://github.com/zlatangk/Pizza_hut_Analysis" target="_blank" class="github-link">View Case Study</a>
       </div>
     </div>
@@ -298,7 +294,7 @@
     const toggleBtn = document.querySelector('.toggle-theme');
     toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('dark');
-      if (document.body.classList.contains('dark')) {
+      if(document.body.classList.contains('dark')){
         toggleBtn.textContent = '☀️';
       } else {
         toggleBtn.textContent = '🌙';
