@@ -1,41 +1,7 @@
-# Golla Karthik - Portfolio Website 🌐
+# 💼 Golla Karthik 
 
-Hi! I'm **Golla Karthik**, a Business Analyst with 3+ years of experience.  
-This is my personal portfolio website where I showcase my education, skills, and the SQL case studies I’ve worked on.
-
----
-
-## 🔗 Live Website
-
-You can view my portfolio here:  
-👉 [https://gkarthikportfolio.netlify.app](https://gkarthikportfolio.netlify.app)
-
----
-
-## 📁 What’s Inside
-
-- **Profile Section** – Name, photo, contact info, LinkedIn & GitHub links  
-- **Resume** – Downloadable PDF  
-- **Education** – My academic background  
-- **Skills** – Tools and technologies I use  
-- **Projects** – SQL case studies and academic projects with GitHub links  
-- **Dark/Light Theme** – You can toggle between themes by clicking the sun/moon icon 🌙
-
----
-
-## 🧾 Resume
-
-📄 [Click here to download my resume](https://github.com/zlatangk/Golla_Karthik_Resume.pdf)
-
----
-
-## 🗃️ My SQL Case Studies
-
-These are practical projects I worked on using SQL:
-
-- 🍕 [Pizza Runner Case Study](https://github.com/zlatangk/pizza_runner_sql_case-study)  
-- 🍽️ [Danny's Diner SQL](https://github.com/zlatangk/dannys-diner-sql)  
-- 🍔 [Pizza Hut Analysis](https://github.com/zlatangk/Pizza_hut_Analysis)
+Welcome to the GitHub repository of my personal portfolio!  
+I'm **Golla Karthik**, a Business Analyst with over 3 years of experience in transforming data into actionable insights. This portfolio is a reflection of my skills, educational background, and hands-on SQL case studies.
 
 ---
 
@@ -44,10 +10,58 @@ These are practical projects I worked on using SQL:
 I enjoy solving business problems with data and continuously learning new tools to improve decision-making.  
 If you have feedback or collaboration ideas, feel free to reach out!
 
-📧 Email: gollkarthk@gmail.com  
-🔗 LinkedIn: [linkedin.com/in/gollakarthk](https://www.linkedin.com/in/gollakarthk/)  
-💻 GitHub: [github.com/zlatangk](https://github.com/zlatangk)
+---
+
+## 🌍 Live Portfolio
+
+👉 [https://gkarthikportfolio.netlify.app](https://gkarthikportfolio.netlify.app)
 
 ---
 
-> Built with patience, practice, and a lot of Google searches 😄
+## 📄 Resume
+
+📌 [Download Resume](https://github.com/zlatangk/Golla_Karthik_Resume.pdf)
+
+---
+
+## 🧠 Skills & Tools
+
+- **Data Analysis**: SQL, Excel, Tableau  
+- **Project Tools**: JIRA, MS Office, Confluence  
+- **Soft Skills**: Problem Solving, Communication, Documentation  
+- **Others**: Business Process Mapping, Requirement Gathering
+
+---
+
+## 📊 Case Studies & Projects
+
+### 🔍 SQL Case Studies
+
+| Title | Description | GitHub Link |
+|-------|-------------|-------------|
+| 🍕 Pizza Runner | End-to-end analysis of a pizza delivery business using SQL | [View](https://github.com/zlatangk/pizza_runner_sql_case-study) |
+| 🍽️ Danny’s Diner | Data extraction and insights from a small diner business | [View](https://github.com/zlatangk/dannys-diner-sql) |
+| 🍔 Pizza Hut Analysis | Financial and operations analysis using advanced SQL | [View](https://github.com/zlatangk/Pizza_hut_Analysis) |
+
+---
+
+## 🎓 Education
+
+- **MBA in HR & Marketing**  
+  Vignan Institute of Information Technology (2019–2021)
+
+- **B.Tech in Manufacturing Engineering**  
+  National Institute of Foundry and Forge Technology (2014–2018)
+
+---
+
+## 📬 Contact Me
+
+- 📧 Email: [gollkarthk@gmail.com](mailto:gollkarthk@gmail.com)
+- 🔗 LinkedIn: [linkedin.com/in/gollakarthk](https://www.linkedin.com/in/gollakarthk/)
+- 💻 GitHub: [github.com/zlatangk](https://github.com/zlatangk)
+
+
+---
+
+> “Mistakes are proof that you are trying.” — Keep learning, keep building 🚀
