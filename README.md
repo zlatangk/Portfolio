@@ -20,8 +20,7 @@ If you have feedback or collaboration ideas, feel free to reach out!
 
 ## 📄 Resume
 
-📌 [Download Resume](https://github.com/zlatangk/Golla_Karthik_Resume.pdf)
-
+📌 [Download Resume](https://github.com/zlatangk/Portfolio/blob/main/Karthik_Business%20Analyst.pdf)
 ---
 
 ## 🧠 Skills & Tools
